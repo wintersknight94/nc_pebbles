@@ -4,6 +4,17 @@ local minetest, nodecore
 -- LUALOCALS > ---------------------------------------------------------
 local modname = minetest.get_current_modname()
 
+
+--minetest.override_item("nc_stonework:chip",
+--	on_place = function(itemstack, placer, pointed_thing)
+--	local pos = nodecore.buildable_to(pointed_thing.under)
+--		and pointed_thing.under or pointed_thing.above
+--	nodecore.set_loud(pos, {name = modname .. ":pebble"})
+--	itemstack:take_item(1)
+--	return itemstack
+--end
+--})
+
 minetest.register_node(modname .. ":pebble", {
 		description = "Pebble",
 		drawtype = "nodebox",
@@ -15,7 +26,7 @@ minetest.register_node(modname .. ":pebble", {
 			{-0.125, -0.5, -0.1875, 0.125, -0.4375, 0.1875}, -- NodeBox1
 			{-0.1875, -0.5, -0.125, 0.1875, -0.4375, 0.125}, -- NodeBox2
 		}
-	},
+		},
 		sunlight_propagates = true,
 		walkable = false,
 		groups = {
@@ -27,7 +38,8 @@ minetest.register_node(modname .. ":pebble", {
 		sounds = nodecore.sounds("nc_terrain_stony"),
 		selection_box = nodecore.fixedbox({-3/8, -1/2, -3/8, 3/8, 1/4, 3/8}),
 		drop = "nc_stonework:chip"
-	})
+	}
+)
 
 minetest.register_decoration({
     deco_type = "simple",

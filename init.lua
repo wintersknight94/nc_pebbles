@@ -5,5 +5,7 @@ local include, nodecore
 
 include("pebbles")
 include("shells")
-include("stalactites")
+include("pearls")
 include("craft_adjust")
+include("adze_glass")
+include("adze_shell")
