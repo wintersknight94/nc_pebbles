@@ -47,8 +47,47 @@ minetest.register_decoration({
 	place_on = {"nc_terrain:stone"},
 	place_offset_y = 0,
 	sidelen = 16,
+	fill_ratio = 0.001,
+	y_max = 5,
+	y_min = -31000,
+	flags = "all_ceilings",
+	decoration = modname ..":pearl",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	deco_type = "simple",
+	place_on = {"nc_terrain:stone"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.005,
+	y_max = -100,
+	y_min = -31000,
+	flags = "all_ceilings",
+	decoration = modname ..":pearl",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	deco_type = "simple",
+	place_on = {"nc_terrain:stone"},
+	place_offset_y = 0,
+	sidelen = 16,
 	fill_ratio = 0.01,
-	y_max = 31000,
+	y_max = -250,
+	y_min = -31000,
+	flags = "all_ceilings",
+	decoration = modname ..":pearl",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	deco_type = "simple",
+	place_on = {"nc_terrain:stone"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.025,
+	y_max = -500,
 	y_min = -31000,
 	flags = "all_ceilings",
 	decoration = modname ..":pearl",
